@@ -1,16 +1,40 @@
 # Retrieval-Augmented Medical Conversational Bot
 
-## Overview
-This project implements a conversational bot designed for medical consultations. It leverages retrieval-augmented techniques to provide accurate and contextually relevant responses to users' medical inquiries. The bot integrates deep learning models with retrieval mechanisms to enhance its conversational capabilities.
+This repository contains the code for a Retrieval-Augmented Medical Conversational Bot. The bot leverages retrieval-augmented generation (RAG) techniques to provide accurate and contextually relevant responses to medical queries.
 
+## Table of Contents
+
+- Introduction
+- Features
+- Architecture
+- Installation
+- Usage
+- Contributing
+- License
+
+## Introduction
+
+The Retrieval-Augmented Medical Conversational Bot is designed to assist users by providing medical information and answering health-related questions. It combines the power of large language models with a retrieval mechanism to enhance the accuracy and relevance of the responses.
+The medical information is fed through a pdf document in Data/ folder
 ## Features
-- **Natural Language Processing (NLP):** Utilizes state-of-the-art NLP models for understanding and generating medical-related queries and responses.
-- **Retrieval-Augmented Mechanism:** Combines retrieval-based methods with generative models to improve the accuracy and relevance of responses.
-- **Medical Domain-Specific Knowledge:** Pre-trained on medical datasets for better understanding of medical terminology and concepts.
-- **Conversational AI:** Designed for engaging, human-like interactions with users.
+
+- **Accurate Responses**: Utilizes retrieval-augmented generation to provide precise answers.
+- **Context-Aware**: Understands and maintains context throughout the conversation.
+- **Customizable**: Easily adaptable to different medical domains and datasets.
+
+## Architecture
+
+The bot's architecture includes the following components:
+
+1. **Language Model (LLM)**: Utilizes a pre-trained language model for generating responses.
+2. **Retrieval Mechanism**: Employs a retrieval system to fetch relevant documents from a medical knowledge base.
+3. **Embedding Database**: Stores embeddings of medical documents for efficient retrieval.
+4. **Question Rewriting**: Rewrites user queries to improve retrieval accuracy.
+5. **Context Management**: Maintains conversational context to provide coherent responses.
 
 ## Installation
-To set up the project locally, follow these steps:
+
+To install and set up the project, follow these steps:
 
 1. Clone the repository:
     ```bash
@@ -18,30 +42,19 @@ To set up the project locally, follow these steps:
     cd Retrieval-Augmented-Medical-Conversational-Bot
     ```
 
-2. Install the required packages:
+2. Create and activate a virtual environment:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install the required dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Run the main script to start the bot:
-    ```bash
-    python main.py
-    ```
-
 ## Usage
-Once the bot is running, you can interact with it by typing in your medical-related queries. The bot will use its trained models and retrieval mechanisms to provide accurate responses.
 
-## Project Structure
-- **`main.py`:** Entry point of the application.
-- **`models/`:** Contains the deep learning models used by the bot.
-- **`data/`:** Includes the datasets used for training and evaluation.
-- **`utils/`:** Utility functions and helper scripts.
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request or open an issue if you have any suggestions or improvements.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Acknowledgements
-This project was developed as part of research at [Institution Name]. Special thanks to the contributors and the open-source community for their support.
+To start the bot, run the following command:
+```bash
+python main.py
