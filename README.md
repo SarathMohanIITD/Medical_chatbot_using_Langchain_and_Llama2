@@ -58,4 +58,10 @@ To install and set up the project, follow these steps:
 
 To start the bot, run the following command:
 ```bash
-python main.py
+# run the following command
+python store_index.py
+```
+```bash
+# Finally run the following command
+python app.py
+```
