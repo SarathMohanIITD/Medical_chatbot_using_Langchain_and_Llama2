@@ -2,15 +2,6 @@
 
 This repository contains the code for a Retrieval-Augmented Medical Conversational Bot. The bot leverages retrieval-augmented generation (RAG) techniques to provide accurate and contextually relevant responses to medical queries.
 
-## Table of Contents
-
-- Introduction
-- Features
-- Architecture
-- Installation
-- Usage
-- Contributing
-- License
 
 ## Introduction
 
@@ -26,11 +17,21 @@ The medical information is fed through a pdf document in Data/ folder
 
 The bot's architecture includes the following components:
 
-1. **Language Model (LLM)**: Utilizes a pre-trained language model for generating responses.
-2. **Retrieval Mechanism**: Employs a retrieval system to fetch relevant documents from a medical knowledge base.
-3. **Embedding Database**: Stores embeddings of medical documents for efficient retrieval.
-4. **Question Rewriting**: Rewrites user queries to improve retrieval accuracy.
-5. **Context Management**: Maintains conversational context to provide coherent responses.
+1. **Language Model (LLM)**: Utilizes a pre-trained language model for generating responses. 
+2. **Retrieval Mechanism**: Employs a retrieval system using Langchain
+3. **Embedding Database**: Stores embeddings of medical documents for efficient retrieval using Pinecone .
+
+## Download the model
+```bash
+## Download the Llama 2 Model:
+
+llama-2-7b-chat.ggmlv3.q4_0.bin
+
+
+## From the following link:
+https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
+
+```
 
 ## Installation
 
@@ -45,7 +46,7 @@ To install and set up the project, follow these steps:
 2. Create and activate a virtual environment:
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    source venv/bin/activate  
     ```
 
 3. Install the required dependencies:
